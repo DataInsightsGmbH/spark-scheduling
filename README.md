@@ -19,7 +19,7 @@ You can run any of it by:
  spark-submit \
  --master local \
  < other configs > \
- --class SimpleJob \
+ --class <SimpleJob or ParallelJob>  \
  < path to jar > \
  < path to data >
 ```

@@ -9,7 +9,7 @@ sbt package
 ```
 
 In order to start the Spark application you will need to install Spark. This repo uses Spark 2.4.5, if you have 
-an earlier version, you can change `the variable `sparkVersion in `build.sbt`.
+an earlier version, you can change the variable `sparkVersion` in `build.sbt`.
 
 The application contains two runnable classes: `SimpleJob` and `ParallelJob`
 

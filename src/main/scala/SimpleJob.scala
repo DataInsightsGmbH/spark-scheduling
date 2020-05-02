@@ -1,6 +1,9 @@
 object SimpleJob extends SparkSessionWrapper {
   def main(args: Array[String]): Unit = {
-    val parquetWriter = new ParquetWriter
-    parquetWriter.writeParquet("test2")
+    val listOfFiles = List("parallelTest1", "parallelTest2", "parallelTest3")
+    val parquetWriter = new ParquetWriter(args(0))
+    for (file <- listOfFiles) {
+      parquetWriter.writeParquet(file)
+    }
   }
 }

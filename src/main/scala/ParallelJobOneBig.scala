@@ -11,16 +11,9 @@ object ParallelJobOneBig extends SparkSessionWrapper {
       }
     }
     threadBig.start()
-    val threadBig1 = new Thread {
-      override def run = {
-        spark.sparkContext.setLocalProperty("spark.scheduler.pool", "fair")
-        parquetWriterBig.writeParquet("bigFile1")
-      }
-    }
-    threadBig1.start()
+
     val threadShort1 = new Thread {
       override def run = {
-        Thread.sleep(2000)
         spark.sparkContext.setLocalProperty("spark.scheduler.pool", "fair")
         parquetWriter.writeParquet("smallFile1")
       }
@@ -29,23 +22,22 @@ object ParallelJobOneBig extends SparkSessionWrapper {
 
     val threadShort2 = new Thread {
       override def run = {
-        Thread.sleep(5000)
         spark.sparkContext.setLocalProperty("spark.scheduler.pool", "fair")
         parquetWriter.writeParquet("smallFile2")
       }
     }
     threadShort2.start()
+
     val threadShort3 = new Thread {
       override def run = {
-        Thread.sleep(7000)
         spark.sparkContext.setLocalProperty("spark.scheduler.pool", "fair")
         parquetWriter.writeParquet("smallFile3")
       }
     }
     threadShort3.start()
+
     val threadShort4 = new Thread {
       override def run = {
-        Thread.sleep(3000)
         spark.sparkContext.setLocalProperty("spark.scheduler.pool", "fair")
         parquetWriter.writeParquet("smallFile4")
       }

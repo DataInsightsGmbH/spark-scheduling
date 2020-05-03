@@ -7,9 +7,7 @@ class ParquetWriterBig(path: String) extends SparkSessionWrapper {
     log.info(s"writing into the file $fileName, using sparkSession $spark")
     val df = spark
       .read
-      .option("header", true)
-      .option("multiline", true)
-      .csv(s"$path/train_big.csv")
+      .parquet(s"$path/train_big")
       .repartition(4)
       .where((col("id") % 2) === 0)
 

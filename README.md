@@ -27,3 +27,12 @@ You can run any of it by:
 ##Data
 
 Data comes from a training set for this kaggle competition https://www.kaggle.com/c/nlp-getting-started/data
+
+## Want to read more?
+
+Very useful example I also recycled
+https://www.waitingforcode.com/apache-spark/fair-jobs-scheduling-apache-spark/read
+
+Official Documentation
+https://spark.apache.org/docs/latest/job-scheduling.html
+

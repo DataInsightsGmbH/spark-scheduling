@@ -17,6 +17,6 @@ class ParquetWriter(path: String) extends SparkSessionWrapper {
     df.write
       .mode("overwrite")
       .parquet(s"$path/$fileName")
-    Thread.sleep(500000)
+    //Thread.sleep(500000)
   }
 }

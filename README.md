@@ -18,13 +18,13 @@ You can run any of it by:
  ```bash
  spark-submit \
  --master local \
- < other configs > \
+ <other configs> \
  --class <SimpleJob or ParallelJob>  \
- < path to jar > \
- < path to data >
+ <path to jar> \
+ <path to data>
 ```
 
-##Data
+## Data
 
 Data comes from a training set for this kaggle competition https://www.kaggle.com/c/nlp-getting-started/data
 

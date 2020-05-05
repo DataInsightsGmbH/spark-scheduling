@@ -1,4 +1,4 @@
-# Shared Spark Context Demo
+# Spark Scheduling Demo
 
 This repository contains an example of starting multiple Spark jobs in parallel. 
 In order to build the project you will need `sbt` which you cen get on https://www.scala-sbt.org/.
@@ -23,3 +23,7 @@ You can run any of it by:
  < path to jar > \
  < path to data >
 ```
+
+##Data
+
+Data comes from a training set for this kaggle competition https://www.kaggle.com/c/nlp-getting-started/data

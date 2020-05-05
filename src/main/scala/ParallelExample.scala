@@ -19,7 +19,7 @@ object ParallelExample extends SparkSessionWrapper {
     new Thread(new Runnable() {
       override def run(): Unit = {
         spark.sparkContext.setLocalProperty("spark.scheduler.pool", "fair")
-        val input2 = spark.sparkContext.parallelize(1 to 5000, 8)
+        val input2 = spark.sparkContext.parallelize(1000000000 to 2000000000, 8)
         val oddNumbers = input2.filter(nr => {
           val isOdd = nr % 1000000 != 0
           if (nr == 2500) {

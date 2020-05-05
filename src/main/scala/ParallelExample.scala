@@ -22,7 +22,7 @@ object ParallelExample extends SparkSessionWrapper {
         val input2 = spark.sparkContext.parallelize(1000000000 to 2000000000, 8)
         val oddNumbers = input2.filter(nr => {
           val isOdd = nr % 1000000 != 0
-          if (nr == 2500) {
+          if (nr == 1500000000) {
             Thread.sleep(3000L)
           }
           isOdd

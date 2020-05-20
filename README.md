@@ -4,7 +4,7 @@ This repository contains an example of starting multiple Spark jobs in parallel.
 In order to build the project you will need `sbt` which you cen get on https://www.scala-sbt.org/.
 Then you can build with
 ```bash
-sbt build
+sbt compile
 sbt package
 ```
 

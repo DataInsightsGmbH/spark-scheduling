@@ -1,6 +1,7 @@
 # Spark Scheduling Demo
 
-This repository contains an example of starting multiple Spark jobs in parallel. 
+This repository contains an example of starting multiple Spark jobs in parallel. This code was used for demo in a webinar which can be accessed here https://www.youtube.com/watch?v=e7qbrpvmOgY
+
 In order to build the project you will need `sbt` which you cen get on https://www.scala-sbt.org/.
 Then you can build with
 ```bash
